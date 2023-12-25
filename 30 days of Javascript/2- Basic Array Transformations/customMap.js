@@ -36,8 +36,3 @@ var map = function(arr, fn) {
     })
     return returnedArray;
 };
-console.log(
-  map([1, 2, 3], function plusone(n) {
-    return n + 1;
-  })
-);
