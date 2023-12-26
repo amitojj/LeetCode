@@ -9,4 +9,4 @@ var climbStairs = function (n) {
     }
     return current;
 };
-console.log(climbStairs(3));
+console.log(climbStairs(3)); 
