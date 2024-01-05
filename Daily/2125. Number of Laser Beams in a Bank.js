@@ -17,4 +17,25 @@ Example 1:
 Input: bank = ["011001","000000","010100","001000"]
 Output: 8
  */
-console.log(parseInt("011001"));
+
+const numberOfBeams = function (bank) {
+  let prev = 0;
+  let curr = 0;
+  let result = 0;
+  for (let i = 0; i < bank.length; i++) {
+    for (let j = 0; j < bank[i].length; j++) {
+      if (bank[i].charAt(j) === "1") {
+        curr++;
+      }
+    }
+    result += prev * curr;
+    if (curr > 0) {
+      prev = curr;
+      curr = 0;
+    }
+  }
+  return result;
+};
+
+const bank = ["011001", "000000", "010100", "001000"];
+console.log(numberOfBeams(bank));
